@@ -1,0 +1,101 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE, Edge cũ */
+* {
+  -ms-overflow-style: none;
+}
+
+.modal {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.btn-group-fixed {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.btn-group-fixed button {
+  width: 70px;
+  white-space: break-spaces;
+  word-break: break-all;
+}
+
+.modal-content {
+  background-color: black;
+}
+
+#progress {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#progress>div {
+  width: calc(100% / 5);
+  border: 1px solid white;
+  padding: 20px;
+}
+
+body {
+  padding: 5px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+}
+
+.rune-name {
+  display: inline-flex;
+  width: 80px;
+  gap: 5px;
+}
+
+.rune-count {
+  display: inline-block;
+  width: 40px;
+}
+
+.tier-1 {
+  color: #bdbdbd;
+  font-weight: 700;
+}
+
+.tier-2 {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.tier-3 {
+  color: #2196f3;
+  font-weight: 700;
+}
+
+.tier-4 {
+  color: #9c27b0;
+  font-weight: 700;
+}
+
+.tier-5 {
+  color: #ff9800;
+  font-weight: 700;
+}
+
+.tier-6 {
+  color: #f44336;
+  font-weight: 700;
+}
