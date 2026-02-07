@@ -99,3 +99,16 @@ body {
   color: #f44336;
   font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  #progress {
+    gap: 15px;
+  }
+
+  #progress>div {
+    width: 100%;
+  }
+}
