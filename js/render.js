@@ -36,8 +36,30 @@ var ViewModel = function (days, score) {
     return [...this.mappingArr()].sort((a, b) => b.quantity * runePoints[b.name] - a.quantity * runePoints[a.name]);
   });
 
+  this.scoreByMonth = ko.computed(() => {
+    const map = {};
+
+    this.score().forEach(({ value, index }) => {
+      const monthKey = moment(startDay)
+        .add(index - 1, 'day')
+        .format('YYYY-MM');
+
+      if (!map[monthKey]) {
+        map[monthKey] = 0;
+      }
+
+      map[monthKey] += value;
+    });
+
+    return Object.entries(map).map(([month, total]) => ({
+      month,
+      total,
+    }));
+  });
+
   this.table = ko.observable(1);
   this.sort = ko.observable(1);
+  this.month = ko.observable(0);
 };
 
 ko.applyBindings(new ViewModel(days, score));

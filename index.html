@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/css.css" />
   </head>
-
+  <script>
+    var startDay = '2020-09-21';
+  </script>
   <body>
     <div class="btn-group-fixed">
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#processModal">Process</button>
@@ -14,7 +16,7 @@
     <div id="progress" data-bind="foreach: daysProcessed">
       <div class="d-flex flex-column justify-content-between">
         <div>
-          <span type="button" data-toggle="tooltip" data-placement="top" data-bind="attr: { title: raw.length + ' runes' }, text: moment('2020-09-21').add($index(), 'day').format(`DD/MMM/YYYY`)"></span>
+          <span type="button" data-toggle="tooltip" data-placement="top" data-bind="attr: { title: raw.length + ' runes' }, text: moment(startDay).add($index(), 'day').format(`DD/MMM/YYYY`)"></span>
           <div data-bind="template: { name: 'table-template', data: { list: list }}"></div>
         </div>
         <div class="mt-4" data-bind="text: 'Total: ' + combineRunes(raw).toLocaleString('vi-VN')"></div>
@@ -25,10 +27,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="processModal">
-              <div id="sortHeader" class="d-flex align-items-center" style="gap: 20px">
+              <div id="sortHeader" class="d-flex align-items-center" style="gap: 12px">
                 Process
-                <button type="button" class="btn btn-secondary" data-bind="visible: sort() == 1, click: () => sort(2)">Sort by day</button>
-                <button type="button" class="btn btn-secondary" data-bind="visible: sort() == 2, click: () => sort(1)">Sort by value</button>
+                <button type="button" class="btn btn-secondary" data-bind="visible: sort() == 1, click: () => { sort(2); month(0); }">Sort by day</button>
+                <button type="button" class="btn btn-secondary" data-bind="visible: sort() == 2, click: () => { sort(1); month(0); }">Sort by value</button>
+                <button type="button" class="btn btn-secondary" data-bind="click: () => month(1)">Filter by month</button>
               </div>
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -36,8 +39,9 @@
             </button>
           </div>
           <div class="modal-body">
-            <div data-bind="template: { name: 'process-template', data: { list: scoreSortByValue }}, visible: sort() == 1"></div>
-            <div data-bind="template: { name: 'process-template', data: { list: score }}, visible: sort() == 2"></div>
+            <div data-bind="template: { name: 'process-template', data: { list: scoreSortByValue }}, visible: sort() == 1 && month() == 0"></div>
+            <div data-bind="template: { name: 'process-template', data: { list: score }}, visible: sort() == 2 && month() == 0"></div>
+            <div data-bind="template: { name: 'month-template', data: $root }, visible: month() == 1"></div>
           </div>
         </div>
       </div>
@@ -92,7 +96,19 @@
 
   <script type="text/html" id="process-template">
     <div data-bind="foreach: list">
-      <p class="m-0" data-bind="text: moment('2020-09-21').add(index - 1, 'day').format(`DD/MMM/YYYY`) + ': ' + value.toLocaleString('vi-VN')"></p>
+      <p class="m-0">
+        <span data-bind="text: moment(startDay).add(index - 1, 'day').format('DD/MMM/YYYY')"></span>:
+        <span data-bind="text: value.toLocaleString('vi-VN')"></span>
+      </p>
+    </div>
+  </script>
+
+  <script type="text/html" id="month-template">
+    <div data-bind="foreach: scoreByMonth">
+      <p class="m-0">
+        <span data-bind="text: moment(month, 'YYYY-MM').format('MMM/YYYY')"></span>:
+        <span data-bind="text: total.toLocaleString('vi-VN')"></span>
+      </p>
     </div>
   </script>
 
