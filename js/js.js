@@ -71,4 +71,4 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-console.log(shuffle(['Tal', 'Tal', 'Thul', 'Thul', 'Thul', 'Eth', 'Eth', 'Eth', 'Eth', 'Tir', 'Tir', 'Tir', 'Shael', 'Shael', 'Ko', 'Amn', 'Ort', 'Ith', 'Lem', 'Ral']));
+console.log(shuffle([]));
