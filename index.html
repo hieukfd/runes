@@ -14,7 +14,7 @@
     <div id="progress" data-bind="foreach: daysProcessed">
       <div class="d-flex flex-column justify-content-between">
         <div>
-          <span type="button" data-toggle="tooltip" data-placement="top" data-bind="attr: { title: raw.length + ' runes' }, text: 'Ngày ' + pad($index() + 1)"></span>
+          <span type="button" data-toggle="tooltip" data-placement="top" data-bind="attr: { title: raw.length + ' runes' }, text: moment('2020-09-21').add($index(), 'day').format(`DD/MMM/YYYY`)"></span>
           <div data-bind="template: { name: 'table-template', data: { list: list }}"></div>
         </div>
         <div class="mt-4" data-bind="text: 'Total: ' + combineRunes(raw).toLocaleString('vi-VN')"></div>
@@ -92,10 +92,10 @@
 
   <script type="text/html" id="process-template">
     <div data-bind="foreach: list">
-      <p class="m-0" data-bind="text: 'Day ' + moment('2020-09-21').add(index - 1, 'day').format(`DD/MMM/YYYY`) + ': ' + value.toLocaleString('vi-VN')"></p>
+      <p class="m-0" data-bind="text: moment('2020-09-21').add(index - 1, 'day').format(`DD/MMM/YYYY`) + ': ' + value.toLocaleString('vi-VN')"></p>
     </div>
   </script>
-  
+
   <script src="./library/moment.min.js"></script>
   <script src="./library/jquery-3.4.1.slim.min.js"></script>
   <script src="./library/popper.min.js"></script>
