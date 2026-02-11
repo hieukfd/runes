@@ -57,9 +57,31 @@ var ViewModel = function (days, score) {
     }));
   });
 
+  this.scoreByWeek = ko.computed(() => {
+    const map = {};
+
+    this.score().forEach(({ value, index }) => {
+      const weekKey = moment(startDay)
+        .add(index - 1, 'day')
+        .startOf('isoWeek')
+        .format('YYYY-[W]WW');
+
+      if (!map[weekKey]) {
+        map[weekKey] = 0;
+      }
+
+      map[weekKey] += value;
+    });
+
+    return Object.entries(map).map(([week, total]) => ({
+      week,
+      total,
+    }));
+  });
+
   this.table = ko.observable(1);
   this.sort = ko.observable(1);
-  this.month = ko.observable(0);
+  this.statistics = ko.observable('month');
 };
 
 ko.applyBindings(new ViewModel(days, score));
