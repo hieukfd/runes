@@ -168,56 +168,7 @@
   <script src="./library/knockout.js"></script>
   <script src="./js/js.js"></script>
   <script src="./js/config.js"></script>
-  <script>
-    var days = [];
-    var total = [];
-
-    days.push(['Ort', 'Amn', 'Dol', 'Tal', 'Nef', 'Hel', 'Eth', 'Tal', 'Tal', 'Sol', 'Ith', 'Tal', 'Ort', 'Lum', 'Pul', 'Nef', 'Shael', 'Amn', 'Io', 'Dol', 'Amn']);
-    days.push(['Thul', 'Tir', 'Lem', 'Shael', 'Eth', 'Eth', 'Eth', 'Io', 'Amn', 'Thul', 'Ral', 'Ort', 'Thul', 'Hel', 'Io', 'Ith', 'Ral', 'Ral', 'Amn', 'Eth']);
-    days.push(['Amn', 'Ort', 'Eld', 'Ith', 'Tir', 'Ort', 'El', 'Tal', 'Amn', 'Thul', 'Ral', 'Ort', 'Fal', 'Tir', 'Ral', 'Ort', 'Ort', 'Ort', 'Tal', 'Sol', 'Eld']);
-    days.push(['Ort', 'Ort', 'Ort', 'El', 'Dol', 'Ort', 'Hel', 'Amn', 'Eth', 'Tal', 'Ith', 'Lem', 'Ort', 'Amn', 'Eth', 'Amn', 'Tir', 'Shael', 'Mal', 'Hel', 'El']);
-    days.push(['El', 'Ith', 'Amn', 'Amn', 'Tal', 'Eth', 'Ko', 'Ral', 'Eth', 'Thul', 'Lum', 'Tal', 'Dol', 'Amn', 'Io', 'Ith', 'Ith', 'Eth', 'Ort', 'Um']);
-    days.push(['Eth', 'Thul', 'Amn', 'Eth', 'Sol', 'Tal', 'Amn', 'El', 'Tal', 'Tir', 'Nef', 'Shael', 'Eld', 'Tir', 'Hel', 'Hel', 'Io', 'Tal', 'Tal', 'El', 'Nef']);
-    days.push(['Eth', 'Dol', 'Io', 'Ral', 'Eth', 'Ort', 'Tal', 'Hel', 'Thul', 'Shael', 'Ith', 'Sol', 'Eth', 'Shael', 'Thul', 'Sol', 'Shael', 'Thul', 'Amn', 'Hel', 'Ral']);
-    days.push(['Lum', 'Ort', 'Shael', 'Eld', 'Ith', 'Tal', 'Ort', 'Tal', 'Ral', 'Dol', 'Ko', 'Ort', 'Ort', 'Ort', 'Thul', 'Sol', 'Tir', 'Dol', 'Eld', 'Ral']);
-    days.push(['Dol', 'Nef', 'Tal', 'Sol', 'Ort', 'Tal', 'Ral', 'Thul', 'Ko', 'Ort', 'Nef', 'Shael', 'Fal', 'Amn', 'Amn', 'Ith', 'Ort', 'Amn', 'Shael', 'Amn']);
-    days.push(['Tal', 'Shael', 'Sol', 'Ral', 'Ort', 'Thul', 'Shael', 'El', 'Ral', 'Sol', 'Shael', 'Tal', 'Tal', 'Ort', 'Tal', 'Tir', 'Tal', 'Tal', 'Hel', 'Tal', 'Tal']);
-    days.push(['Eth', 'Mal', 'Ral', 'Ort', 'Dol', 'Tal', 'Io', 'Amn', 'Ith', 'Ral', 'Ort', 'Sol', 'Thul', 'Eth', 'Tir', 'Ral', 'Thul', 'Ral', 'Sol', 'Shael']);
-    days.push(['Tir', 'Tal', 'Eth', 'Amn', 'Tal', 'Ort', 'Tir', 'Sol', 'Eth', 'Ort', 'Tal', 'Tal', 'Sol', 'Shael', 'Io', 'Hel', 'Amn', 'Ral', 'Ral', 'Ort', 'El', 'Dol']);
-    days.push(['Eth', 'Ort', 'Ort', 'Tir', 'Eth', 'Ort', 'Tir', 'Amn', 'Lum', 'Eth', 'Tal', 'Eth', 'Sol', 'Ort', 'Amn', 'Sol', 'Thul', 'Tal', 'Tal', 'Ral']);
-    days.push(['Nef', 'Nef', 'Shael', 'Ort', 'Ral', 'Nef', 'Fal', 'Ort', 'Eth', 'Ort', 'Ort', 'Tir', 'Eth', 'Amn', 'Ral', 'Ith', 'Thul', 'Eth', 'Ort', 'Thul', 'Eth']);
-    days.push(['Shael', 'Ort', 'Ral', 'Tal', 'Dol', 'Amn', 'Ort', 'Eth', 'Shael', 'Tal', 'Dol', 'Nef', 'Ort', 'Ral', 'Shael', 'Eth', 'Amn', 'Tal', 'Dol', 'Tir']);
-    days.push(['Ort', 'Thul', 'Eth', 'Ort', 'Lum', 'Hel', 'Ort', 'Dol', 'Thul', 'Tal', 'Ort', 'El', 'Hel', 'Eth', 'Sol', 'Ort', 'Thul', 'Lum', 'Eld', 'Tir', 'Thul']);
-    days.push(['Nef', 'Amn', 'Nef', 'Tal', 'Eth', 'El', 'Thul', 'Eth', 'Shael', 'Sol', 'Shael', 'Amn', 'Ort', 'Ort', 'Hel', 'Tal', 'Sol', 'Ral', 'Ort', 'Sol']);
-    days.push(['Sol', 'Thul', 'Ort', 'Hel', 'Shael', 'Amn', 'Thul', 'Lum', 'Shael', 'Ith', 'Amn', 'Ith', 'Eth', 'Thul', 'Eth', 'Shael', 'Ort', 'Tal', 'Shael', 'Ith', 'Tir', 'Eth']);
-    days.push(['Amn', 'Ort', 'Eth', 'Hel', 'Io', 'Ral', 'El', 'Tir', 'Ith', 'Hel', 'Shael', 'Hel', 'Ort', 'El', 'Tal', 'Eth', 'Ort', 'Shael', 'Eth', 'Ort', 'Thul', 'Ral', 'Shael']);
-    days.push(['Eth', 'Io', 'Ort', 'Sol', 'Eth', 'Ith', 'Sol', 'Ko', 'Thul', 'Ral', 'Tal', 'Ort', 'Ith', 'Eth', 'Gul', 'Ort', 'Ith', 'Ral', 'Amn', 'Amn']);
-    days.push(['Thul', 'Hel', 'Thul', 'Ral', 'Tal', 'Sol', 'Ort', 'Nef', 'Eth', 'Ort', 'Tal', 'Thul', 'Dol', 'Nef', 'Eth', 'Ral', 'Sol', 'Thul', 'Sol', 'Nef']);
-    days.push(['Ral', 'Sol', 'Nef', 'Thul', 'Ral', 'Thul', 'Amn', 'Tir', 'Ort', 'Thul', 'Ith', 'Ort', 'Ort', 'Dol', 'Io', 'Shael', 'Tir', 'Dol', 'Ko', 'Tir']);
-    days.push(['Tal', 'Tir', 'Sol', 'Amn', 'Amn', 'Dol', 'El', 'Eth', 'Ral', 'Sol', 'Pul', 'Tal', 'Ral', 'Gul', 'Thul', 'El', 'Thul', 'Ith', 'Amn', 'Tal']);
-    days.push(['Ort', 'Tal', 'Ort', 'Eth', 'Dol', 'Tal', 'Ith', 'Ral', 'Ort', 'Ort', 'Tal', 'Sol', 'Hel', 'Thul', 'Eth', 'Tal', 'Tal', 'Shael', 'Eld', 'Tal', 'Lem', 'Ith']);
-    days.push(['Ort', 'Tal', 'Amn', 'Eth', 'Hel', 'Sol', 'Tal', 'Amn', 'Nef', 'Thul', 'Tir', 'Lum', 'Tal', 'Ort', 'Ral', 'Tal', 'Fal', 'Tal', 'Tir', 'Hel']);
-    days.push(['Thul', 'Fal', 'Tal', 'Sol', 'Ral', 'Thul', 'Ort', 'Tal', 'Thul', 'Tir', 'Ral', 'Tal', 'Eld', 'Amn', 'Amn', 'Sol', 'Dol', 'Nef', 'Ral', 'Tal', 'Shael']);
-    days.push(['Tal', 'Shael', 'El', 'Ort', 'Ort', 'Ort', 'Mal', 'Amn', 'Dol', 'Nef', 'Tal', 'Tir', 'Eth', 'Dol', 'Shael', 'Hel', 'Ort', 'Eth', 'Ral', 'Tal']);
-    days.push(['Amn', 'Eld', 'Ith', 'Tal', 'Tir', 'Hel', 'Thul', 'Mal', 'Ort', 'Tal', 'Shael', 'Amn', 'Ral', 'Ith', 'Eth', 'Ort', 'Eth', 'El', 'Ist', 'Tir']);
-    days.push(['Thul', 'Io', 'Tal', 'Shael', 'Ral', 'Ort', 'Thul', 'Mal', 'Amn', 'Tal', 'Lum', 'Tal', 'Nef', 'Amn', 'El', 'Lum', 'Sol', 'Eth', 'Eth', 'Dol']);
-    days.push(['Tal', 'Eth', 'Ith', 'Tal', 'Shael', 'Ith', 'Amn', 'Tir', 'Amn', 'Tal', 'Amn', 'Sol', 'Eth', 'Ral', 'Ort', 'Shael', 'Amn', 'Eth', 'Ith', 'Tal']);
-    days.push(['Eth', 'Eth', 'Amn', 'Shael', 'Ort', 'Eth', 'Amn', 'Eth', 'Lum', 'Tal', 'Ith', 'Eth', 'Amn', 'Ort', 'Tal', 'Ort', 'Tir', 'Tal', 'Ort', 'Amn']);
-    days.push(['Sol', 'Ral', 'Ort', 'Ith', 'Sol', 'Ort', 'Sol', 'Tir', 'Ort', 'Tal', 'Thul', 'Amn', 'Amn', 'Amn', 'Tir', 'El', 'Ral', 'Eth', 'Hel', 'Ral']);
-    days.push(['Eth', 'Lum', 'Thul', 'Thul', 'Eth', 'Tal', 'Tir', 'Tir', 'Amn', 'Sol', 'El', 'Thul', 'Thul', 'Ort', 'Fal', 'Lum', 'Dol', 'Hel', 'Thul', 'Thul', 'Amn']);
-    days.push(['Tal', 'Shael', 'Amn', 'Amn', 'Sol', 'Tal', 'Thul', 'Ral', 'Thul', 'Tir', 'Ral', 'Ko', 'Amn', 'Amn', 'Eth', 'Tal', 'Tal', 'Tir', 'Tir', 'Tal']);
-    days.push(['Tal', 'Tal', 'Ort', 'Thul', 'Eth', 'Tal', 'Ral', 'Eld', 'Ort', 'Shael', 'Hel', 'Tir', 'Thul', 'Ral', 'Ort', 'Nef', 'Tal', 'Shael', 'Ith', 'Ith', 'Ral']);
-    days.push(['Ral', 'Sol', 'El', 'Sol', 'Sol', 'Amn', 'Ort', 'Tir', 'Eth', 'Nef', 'Tal', 'Eth', 'Shael', 'Ral', 'Ort', 'Ort', 'Nef', 'Ral', 'Ort', 'Hel']);
-    days.push(['Ort', 'Ral', 'Tal', 'Tal', 'Dol', 'Tir', 'Eth', 'Nef', 'Amn', 'Amn', 'Dol', 'Ith', 'El', 'Sol', 'Nef', 'Tal', 'Eth', 'Eth', 'Tal', 'Ral']);
-    days.push(['Ral', 'Tal', 'Dol', 'El', 'Amn', 'Eth', 'Ort', 'Ral', 'Ort', 'Ith', 'Shael', 'Tal', 'Tal', 'Tal', 'Tal', 'Amn', 'Shael', 'Lum', 'Ith', 'El']);
-    days.push(['Lem', 'Thul', 'Shael', 'Eth', 'Thul', 'Ko', 'Tir', 'Tir', 'Ral', 'Amn', 'Ith', 'Thul', 'Shael', 'Ort', 'Eth', 'Tal', 'Tir', 'Eth', 'Eth', 'Tal']);
-    days.push(['Ort', 'Amn', 'Ort', 'Ith', 'Thul', 'Shael', 'Eld', 'Ort', 'Amn', 'Tir', 'Ith', 'Amn', 'Shael', 'Ort', 'Tal', 'Lum', 'Ral', 'Tal', 'Ith', 'Io', 'Thul']);
-    days.push(['Ral', 'Ral', 'Sol', 'Ko', 'Ort', 'Sol', 'Amn', 'Tir', 'Hel', 'Shael', 'Eth', 'Amn', 'Amn', 'Ort', 'Eth', 'Ort', 'Tal', 'Ral', 'Hel', 'Tal']);
-    days.push(['Tal', 'Tal', 'Eth', 'Ort', 'Ort', 'Tir', 'Tal', 'Ort', 'Amn', 'Tal', 'Tal', 'Thul', 'Thul', 'Tal', 'Tal', 'Eth', 'Ort', 'Nef', 'Shael', 'Um']);
-    days.push(['Amn', 'Thul', 'Ort', 'Sol', 'Ral', 'Ort', 'Dol', 'Ral', 'Amn', 'Dol', 'Tal', 'Nef', 'Eth', 'Ort', 'Eld', 'Ort', 'Ith', 'Ort', 'Tal', 'Hel']);
-    days.push(['Fal', 'Lem', 'Nef', 'Amn', 'Amn', 'El', 'El', 'Eth', 'Sol', 'Amn', 'Ort', 'Ort', 'Amn', 'Ort', 'Ith', 'Tal', 'Ort', 'Tir', 'Ort', 'Ral', 'Ral']);
-    days.push(['Tal', 'Thul', 'Sol', 'El', 'Sol', 'Shael', 'Ort', 'Amn', 'Eth', 'Hel', 'Thul', 'Dol', 'Ith', 'Tal', 'Um', 'Tir', 'Ral', 'Ko', 'Pul', 'Fal']);
-  </script>
+  <script src="./js/game.js"></script>
   <script src="./js/render.js"></script>
   <script src="./js/chart.js"></script>
 </html>
