@@ -93,7 +93,8 @@ days.push(['Shael', 'Ral', 'Eth', 'Hel', 'Tal', 'Tir', 'Ral', 'Thul', 'Amn', 'Ra
 days.push(['Amn', 'Eth', 'Thul', 'Tir', 'Ort', 'Amn', 'Shael', 'Tal', 'Eth', 'Ort']);
 days.push(['Ral', 'Amn', 'Dol', 'Eth', 'Ort', 'Fal', 'Tal', 'Sol', 'Hel', 'Ral']);
 days.push(['Ort', 'Eth', 'Amn', 'Amn', 'Sol', 'Ort', 'Ral', 'Eth', 'Amn', 'Nef']);
-days.push(['Tal', 'Nef']);
+days.push(['Tal', 'Nef', 'Eld', 'Shael', 'Thul', 'Hel', 'Amn', 'Lem', 'Sol', 'Eth']);
+days.push(['Ist']);
 
 var num = 10;
 var aaaa = shuffle(days.flat());
