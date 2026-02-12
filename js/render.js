@@ -83,8 +83,9 @@ var ViewModel = function (days, score) {
   this.sort = ko.observable(1);
   this.statistics = ko.observable('month');
 };
+const vm = new ViewModel(days, score);
 
-ko.applyBindings(new ViewModel(days, score));
+ko.applyBindings(vm);
 
 scrollToBottom();
 function scrollToBottom() {

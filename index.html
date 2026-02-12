@@ -11,6 +11,7 @@
   <body>
     <div class="btn-group-fixed">
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#statsModal">Stats</button>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#chartModal">Chart</button>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#processModal">Process</button>
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rankingModal">Table</button>
     </div>
@@ -28,7 +29,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="statsModal">
-              <div id="sortHeader" class="d-flex align-items-center" style="gap: 12px">
+              <div class="d-flex align-items-center" style="gap: 12px">
                 Statistics
                 <button type="button" class="btn btn-secondary" data-bind="click: () => statistics('month')">Month</button>
                 <button type="button" class="btn btn-secondary" data-bind="click: () => statistics('week')">Week</button>
@@ -45,12 +46,31 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="chartModal" tabindex="-1" role="dialog" aria-labelledby="chartModal" aria-hidden="true">
+      <div class="modal-dialog m-0" role="document" style="max-width:none">
+        <div class="modal-content h-100">
+          <div class="modal-header">
+            <h5 class="modal-title" id="chartModal">
+              <div class="d-flex align-items-center" style="gap: 12px">
+                Chart
+              </div>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="text-white">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <canvas id="weeklyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal fade" id="processModal" tabindex="-1" role="dialog" aria-labelledby="processModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="processModal">
-              <div id="sortHeader" class="d-flex align-items-center" style="gap: 12px">
+              <div class="d-flex align-items-center" style="gap: 12px">
                 Process
                 <button type="button" class="btn btn-secondary" data-bind="visible: sort() == 1, click: () => { sort(2); }">Sort by day</button>
                 <button type="button" class="btn btn-secondary" data-bind="visible: sort() == 2, click: () => { sort(1); }">Sort by value</button>
@@ -136,12 +156,13 @@
   <script type="text/html" id="week-template">
     <div data-bind="foreach: scoreByWeek">
       <p class="m-0">
-        <span data-bind="text: moment(week, 'YYYY-[W]WW').startOf('isoWeek').format('DD/MM/YYYY') + ' - ' + moment(week, 'YYYY-[W]WW').endOf('isoWeek').format('DD/MM/YYYY')"></span>:
+        <span data-bind="text: moment(week, 'YYYY-[W]WW').startOf('isoWeek').format('DD/MM') + '-' + moment(week, 'YYYY-[W]WW').endOf('isoWeek').format('DD/MM/YYYY')"></span>:
         <span data-bind="text: total.toLocaleString('vi-VN')"></span>
       </p>
     </div>
   </script>
 
+  <script src="./library/chart.js"></script>
   <script src="./library/moment.min.js"></script>
   <script src="./library/jquery-3.4.1.slim.min.js"></script>
   <script src="./library/popper.min.js"></script>
@@ -199,4 +220,5 @@
     days.push(['Fal', 'Lem', 'Nef', 'Amn', 'Amn', 'El', 'El', 'Eth', 'Sol', 'Amn', 'Ort', 'Ort', 'Amn', 'Ort', 'Ith', 'Tal', 'Ort', 'Tir', 'Ort', 'Ral', 'Ral']);
   </script>
   <script src="./js/render.js"></script>
+  <script src="./js/chart.js"></script>
 </html>
