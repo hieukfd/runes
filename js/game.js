@@ -1,111 +1,89 @@
-days.push(['Amn', 'Amn', 'Tal', 'Sol', 'Eth', 'El', 'Amn', 'Ort', 'Ort', 'Tal']);
-days.push(['Ort', 'Lum', 'Dol', 'Nef', 'Tal', 'Ort', 'Ort', 'Eth', 'Ral', 'El']);
-days.push(['El', 'Ort', 'Eth', 'Ral', 'Amn', 'Amn', 'Ith', 'Amn', 'Thul', 'Ort']);
-days.push(['Sol', 'Amn', 'El', 'Ral', 'Eth', 'Tir', 'Hel', 'Eld', 'Nef', 'Ort']);
-days.push(['Io', 'Ort', 'Amn', 'Sol', 'Ith', 'Dol', 'Tir', 'Ral', 'Dol', 'Tal']);
-days.push(['Eth', 'Tir', 'Eth', 'Fal', 'Dol', 'Tir', 'Ort', 'Eth', 'Ort', 'Amn']);
-days.push(['Ort', 'Lum', 'Amn', 'Ort', 'Tir', 'Ort', 'Tal', 'Ith', 'Dol', 'Eld']);
-days.push(['Eld', 'El', 'Thul', 'Sol', 'Thul', 'Amn', 'Mal', 'Hel', 'Nef', 'Tal']);
-days.push(['Tal', 'Eth', 'Amn', 'Ort', 'Lum', 'Ort', 'Sol', 'Ort', 'Nef', 'Ith']);
-days.push(['Ort', 'Ith', 'Sol', 'Eth', 'El', 'Ith', 'Ith', 'Ort', 'Ort', 'Ort']);
-days.push(['Amn', 'Ith', 'Dol', 'Fal', 'Sol', 'Ral', 'El', 'Amn', 'Thul', 'Thul']);
-days.push(['Shael', 'Ith', 'Tal', 'Ko', 'Ort', 'Ral', 'Shael', 'Tir', 'Ral', 'Thul']);
-days.push(['Ral', 'Eth', 'Nef', 'Ral', 'Ort', 'Ort', 'Tal', 'Shael', 'Eth', 'Eth']);
-days.push(['El', 'Amn', 'Eth', 'Thul', 'Eth', 'Ith', 'Ort', 'Sol', 'Eth', 'Ith']);
-days.push(['Ort', 'Amn', 'Ort', 'Tal', 'Amn', 'Hel', 'Shael', 'Ral', 'Shael', 'Ort']);
-days.push(['Eth', 'Thul', 'Pul', 'Ort', 'Eld', 'Io', 'Nef', 'Io', 'Thul', 'Eld']);
-days.push(['Amn', 'Eth', 'Ort', 'Ko', 'Thul', 'Dol', 'Eth', 'Sol', 'Amn', 'Nef']);
-days.push(['Dol', 'Eth', 'Ort', 'Eth', 'Hel', 'Eth', 'Sol', 'Amn', 'Tal', 'Ort']);
-days.push(['Amn', 'Ort', 'Tir', 'Tal', 'Nef', 'Lem', 'Sol', 'Ral', 'Tal', 'Amn']);
-days.push(['Eld', 'Amn', 'Eth', 'Ko', 'Tir', 'Ral', 'Amn', 'Ort', 'Ral', 'Tal']);
-days.push(['Eth', 'Tal', 'Ith', 'Ort', 'Eth', 'Thul', 'Ort', 'Sol', 'Tal', 'Dol']);
-days.push(['Ort', 'Ko', 'Dol', 'Shael', 'Tal', 'Thul', 'Ith', 'Ort', 'Hel', 'Amn']);
-days.push(['Ral', 'Amn', 'Tal', 'Ort', 'Amn', 'Ith', 'Ral', 'Eth', 'Nef', 'Tal']);
-days.push(['Tir', 'Ort', 'Mal', 'Shael', 'Amn', 'Ort', 'Tir', 'Lum', 'Tal', 'Eth']);
-days.push(['Ral', 'Ral', 'Tal', 'Thul', 'Thul', 'Ort', 'Sol', 'Ral', 'Tir', 'Nef']);
-days.push(['Thul', 'Eth', 'Ort', 'Mal', 'Tir', 'Tir', 'Shael', 'Sol', 'Tal', 'Hel']);
-days.push(['Amn', 'Shael', 'Tal', 'Eth', 'Ort', 'Thul', 'Thul', 'Tal', 'Mal', 'Ith']);
-days.push(['Shael', 'Ort', 'Tal', 'Dol', 'Ith', 'Tal', 'Amn', 'Sol', 'Eth', 'Shael']);
-days.push(['Ort', 'Dol', 'Tal', 'Dol', 'Tal', 'Tal', 'Tal', 'Ith', 'Tal', 'Ort']);
-days.push(['Nef', 'Sol', 'Amn', 'Tir', 'Shael', 'Tal', 'Eth', 'Nef', 'Eth', 'Thul']);
-days.push(['Eth', 'Shael', 'Ort', 'Eth', 'El', 'Amn', 'Dol', 'Tir', 'Tir', 'Shael']);
-days.push(['Dol', 'Tal', 'Ral', 'Thul', 'Ral', 'Sol', 'Shael', 'Shael', 'Ort', 'Sol']);
-days.push(['Tal', 'Io', 'Ort', 'Amn', 'Ral', 'Dol', 'Amn', 'Sol', 'Eth', 'Amn']);
-days.push(['Tal', 'Ko', 'Tir', 'Amn', 'Amn', 'Tal', 'Ort', 'Ort', 'Lum', 'Eth']);
-days.push(['Tir', 'Nef', 'Ort', 'Shael', 'Ral', 'Io', 'Ort', 'Dol', 'Sol', 'Hel']);
-days.push(['Shael', 'Sol', 'Tal', 'Tal', 'Thul', 'Tir', 'Nef', 'Dol', 'El', 'Amn']);
-days.push(['Shael', 'El', 'Nef', 'Ral', 'Amn', 'Ort', 'Tal', 'Sol', 'Ort', 'Thul']);
-days.push(['Tal', 'Eth', 'Tal', 'Hel', 'Thul', 'Dol', 'Amn', 'Tal', 'Io', 'Eld']);
-days.push(['Eth', 'Shael', 'Eth', 'Ith', 'Amn', 'Eld', 'Ith', 'Tir', 'Amn', 'Tal']);
-days.push(['Lum', 'Thul', 'Amn', 'Eth', 'Amn', 'Sol', 'Shael', 'Nef', 'Eth', 'Eth']);
-days.push(['Tal', 'Ith', 'Eth', 'Lum', 'Ith', 'Eth', 'Thul', 'Amn', 'Ral', 'Lem']);
-days.push(['Tal', 'Tal', 'Hel', 'El', 'Ort', 'Lem', 'Eth', 'Eth', 'El', 'Tal']);
-days.push(['Ort', 'Shael', 'Eth', 'Thul', 'Shael', 'Shael', 'Ral', 'Eth', 'Tal', 'Tir']);
-days.push(['Tal', 'Tal', 'Ral', 'Amn', 'Shael', 'Ort', 'Lum', 'Ort', 'Ral', 'Ral']);
-days.push(['Lum', 'El', 'Nef', 'Dol', 'Sol', 'Io', 'Thul', 'Thul', 'Ral', 'Ral']);
-days.push(['Eth', 'Tal', 'Thul', 'Hel', 'Hel', 'Ort', 'El', 'Shael', 'Shael', 'Hel']);
-days.push(['Ort', 'Tal', 'Tal', 'Amn', 'El', 'El', 'Tal', 'Ith', 'Pul', 'Ort']);
-days.push(['Tal', 'Tir', 'Ith', 'Amn', 'Tal', 'Ort', 'Tal', 'Ort', 'Eth', 'Ith']);
-days.push(['Shael', 'Amn', 'Ort', 'Eld', 'Amn', 'Nef', 'Mal', 'Ral', 'Tal', 'Thul']);
-days.push(['Ort', 'Nef', 'Amn', 'Ort', 'Thul', 'Gul', 'Ral', 'Ort', 'Amn', 'Tal']);
-days.push(['Shael', 'Ral', 'Hel', 'Sol', 'Tal', 'Thul', 'Tal', 'Amn', 'Tir', 'Gul']);
-days.push(['Dol', 'Fal', 'Lum', 'Shael', 'Ort', 'Hel', 'Tir', 'Ral', 'Fal', 'Nef']);
-days.push(['Tal', 'Tal', 'Um', 'Ko', 'Ort', 'Hel', 'Tal', 'Ort', 'Sol', 'Ort']);
-days.push(['Nef', 'Amn', 'Nef', 'El', 'Ort', 'Ort', 'Sol', 'Ral', 'Eth', 'Sol']);
-days.push(['Eth', 'Eth', 'Shael', 'Ral', 'Hel', 'Thul', 'Ith', 'Eth', 'Tal', 'Amn']);
-days.push(['Shael', 'Tal', 'Tir', 'Thul', 'Fal', 'Thul', 'Tal', 'Amn', 'Io', 'Ort']);
-days.push(['Ort', 'Eth', 'Ort', 'Ral', 'Dol', 'Tal', 'Thul', 'Eth', 'Ral', 'Tal']);
-days.push(['Shael', 'Io', 'Thul', 'Thul', 'Tal', 'Tal', 'Ith', 'Hel', 'Eth', 'Sol']);
-days.push(['Shael', 'Thul', 'Ort', 'Tir', 'Amn', 'Thul', 'Eth', 'Ist', 'Ral', 'Ral']);
-days.push(['El', 'Eth', 'Ort', 'Tal', 'Amn', 'Dol', 'Eth', 'Eth', 'Tal', 'Amn']);
-days.push(['Ort', 'Eth', 'Tal', 'Ith', 'Thul', 'Amn', 'Tal', 'Amn', 'Ort', 'Hel']);
-days.push(['Ort', 'Amn', 'Thul', 'Amn', 'Ral', 'El', 'Amn', 'Sol', 'Dol', 'Shael']);
-days.push(['El', 'Shael', 'Tal', 'Ort', 'Ral', 'Thul', 'Shael', 'Ort', 'Shael', 'Hel']);
-days.push(['El', 'Thul', 'Tal', 'Ith', 'Amn', 'Thul', 'Eth', 'Shael', 'Tir', 'Tal']);
-days.push(['Sol', 'Amn', 'El', 'Ith', 'Tal', 'Ort', 'Tir', 'Dol', 'Dol', 'Ith']);
-days.push(['Tal', 'Nef', 'Eth', 'Tir', 'Ort', 'Tal', 'Amn', 'Tal', 'Eld', 'Sol']);
-days.push(['Tal', 'Io', 'Sol', 'Tal', 'Sol', 'Ral', 'Hel', 'Um', 'Tir', 'Sol']);
-days.push(['Ort', 'Hel', 'Tal', 'Ort', 'Dol', 'Eth', 'Lem', 'Ort', 'Ith', 'Thul']);
-days.push(['Hel', 'Shael', 'Tal', 'Tal', 'Thul', 'Ral', 'Eth', 'Tir', 'Sol', 'Eth']);
-days.push(['Ort', 'Shael', 'Ort', 'Eth', 'Ko', 'Fal', 'Hel', 'Ort', 'Ral', 'Amn']);
-days.push(['Tal', 'Tal', 'Shael', 'Tal', 'Hel', 'Tir', 'Tal', 'Hel', 'Ort', 'Tal']);
-days.push(['Nef', 'Ith', 'Ort', 'Tal', 'Ort', 'Ort', 'Thul', 'Eth', 'Tal', 'Amn']);
-days.push(['Ort', 'Sol', 'Amn', 'Amn', 'Hel', 'Eld', 'Ral', 'Sol', 'Io', 'Ort']);
-days.push(['Tir', 'Ral', 'Amn', 'Sol', 'Eth', 'Fal', 'Ral', 'Tal', 'Eth', 'Hel']);
-days.push(['Nef', 'Amn', 'Shael', 'Ral', 'Eth', 'Tal', 'Eth', 'Hel', 'Thul', 'Tir']);
-days.push(['Tir', 'Thul', 'Tal', 'Lem', 'Ith', 'Eth', 'Nef', 'Sol', 'Amn', 'Ort']);
-days.push(['Shael', 'Tal', 'Tal', 'Ort', 'Nef', 'Ith', 'Amn', 'Tal', 'Tal', 'Tir']);
-days.push(['Ral', 'Ko', 'Ral', 'Thul', 'Ith', 'El', 'Sol', 'Nef', 'Sol', 'Tal']);
-days.push(['Tal', 'Tal', 'Shael', 'Sol', 'Ral', 'Eth', 'Eth', 'Eth', 'Ort', 'Eth']);
-days.push(['Ort', 'Eth', 'Amn', 'Ith', 'Pul', 'Ort', 'Hel', 'Thul', 'Thul', 'Amn']);
-days.push(['Hel', 'Tal', 'Thul', 'Thul', 'Ral', 'Eth', 'Tir', 'Sol', 'Shael', 'Amn']);
-days.push(['El', 'Tal', 'Tir', 'Ral', 'Ort', 'Shael', 'Thul', 'Ral', 'Ort', 'El']);
-days.push(['Thul', 'Ith', 'Lum', 'Thul', 'Sol', 'Ith', 'Shael', 'Thul', 'Lum', 'Tir']);
-days.push(['Tir', 'Ort', 'Eth', 'Eth', 'Io', 'Tir', 'Amn', 'Ort', 'Shael', 'Thul']);
-days.push(['Thul', 'Eth', 'Tir', 'Lum', 'Ith', 'Ral', 'Ort', 'Ral', 'Ral', 'Ral']);
-days.push(['Ral', 'Ort', 'Eth', 'Thul', 'Ral', 'Io', 'Dol', 'Tir', 'Tal', 'Ort']);
-days.push(['Ral', 'Tal', 'Sol', 'Amn', 'Amn', 'Eld', 'Ort', 'Lum', 'Ort', 'Tal']);
-days.push(['Tal', 'Shael', 'Tal', 'Ko', 'Eth', 'Ort', 'Ort', 'Tal', 'Shael', 'Thul']);
-days.push(['Tal', 'Ith', 'Dol', 'Sol', 'Amn', 'Tir', 'Thul', 'Fal', 'Hel', 'Amn']);
-days.push(['Ort', 'Tal', 'Ral', 'Ith', 'Tal', 'Thul', 'El', 'Eth', 'Tal', 'Amn']);
-days.push(['Eld', 'Sol', 'Ort', 'Ral', 'Ith', 'Eth', 'Tir', 'Ral', 'Hel', 'Amn']);
-days.push(['Thul', 'Tal', 'Ort', 'Lum', 'Dol', 'Dol', 'Tal', 'Ist', 'Thul', 'Sol']);
-days.push(['Amn', 'Shael', 'Ral', 'Tir', 'Tir', 'Ral', 'Ort', 'Lem', 'Amn', 'Ort']);
-days.push(['Um', 'Dol', 'Tir', 'Ort', 'Ral', 'Sol', 'Nef', 'Ort', 'Ral', 'Ral']);
+days.push(['Lem', 'Thul', 'Thul', 'Tir', 'Um', 'Ral', 'Ort', 'Tir', 'Shael', 'Sol', 'Eth', 'Tir', 'Shael', 'Tir', 'Thul']);
+days.push(['Tal', 'Dol', 'Eld', 'Eth', 'Hel', 'Tal', 'Eth', 'Tal', 'Ral', 'Amn', 'El', 'Amn', 'Tal', 'Ith', 'Lum']);
+days.push(['Ort', 'Amn', 'El', 'Sol', 'Nef', 'Ort', 'Thul', 'Amn', 'Ort', 'Tal', 'Ort', 'Thul', 'Lum', 'Eth', 'Eth']);
+days.push(['Ort', 'El', 'Sol', 'Dol', 'Shael', 'Ral', 'Tir', 'Sol', 'Eth', 'Sol', 'Hel', 'Eth', 'Thul', 'Hel', 'Sol']);
+days.push(['Sol', 'Thul', 'Nef', 'Eld', 'Lum', 'Tal', 'Ith', 'Ort', 'Eth', 'Ral', 'Sol', 'El', 'Amn', 'Tal', 'Ral']);
+days.push(['Ort', 'Ort', 'Tal', 'Amn', 'Ko', 'Eth', 'Hel', 'Ral', 'Amn', 'Ort', 'Amn', 'Eth', 'Io', 'Ort', 'Sol']);
+days.push(['Tal', 'Tal', 'Sol', 'Nef', 'Ith', 'Amn', 'Amn', 'Amn', 'Ort', 'Dol', 'Ith', 'Tal', 'Lum', 'Sol', 'Ort']);
+days.push(['Amn', 'Shael', 'Shael', 'Amn', 'Ort', 'Ort', 'Ral', 'Dol', 'Nef', 'Amn', 'Tal', 'Tal', 'Ort', 'Thul', 'Eth']);
+days.push(['Ith', 'Tir', 'Hel', 'Tal', 'Amn', 'Ith', 'Sol', 'Shael', 'Ith', 'Ith', 'Sol', 'Ral', 'Sol', 'Tal', 'Ral']);
+days.push(['Tal', 'Tir', 'Hel', 'Ort', 'Ort', 'Ort', 'Shael', 'Ort', 'Ral', 'Eth', 'Hel', 'Ort', 'Ith', 'Eth', 'Hel']);
+days.push(['Ral', 'Ral', 'Amn', 'Ith', 'Amn', 'Tal', 'Pul', 'Eld', 'Thul', 'Tal', 'Nef', 'Fal', 'Thul', 'Lum', 'Eth']);
+days.push(['Sol', 'Tal', 'Ort', 'Amn', 'Ort', 'Ral', 'Thul', 'Tal', 'El', 'Lem', 'Amn', 'Ral', 'Dol', 'El', 'Shael']);
+days.push(['Amn', 'Tal', 'Amn', 'Shael', 'Ral', 'Ort', 'Shael', 'Shael', 'Tal', 'Hel', 'Shael', 'Eth', 'Ort', 'Hel', 'Ort']);
+days.push(['Sol', 'Tal', 'Ith', 'Nef', 'Ort', 'Thul', 'Shael', 'Amn', 'Nef', 'Hel', 'Nef', 'Dol', 'Ral', 'Nef', 'El']);
+days.push(['Eth', 'Tir', 'Eth', 'Hel', 'Ort', 'Shael', 'El', 'Ral', 'Tal', 'Eth', 'Nef', 'Eth', 'Tal', 'Ort', 'Nef']);
+days.push(['Thul', 'Eth', 'Shael', 'Ral', 'Ort', 'Nef', 'Hel', 'Gul', 'Io', 'Tir', 'Thul', 'Eth', 'Tir', 'Nef', 'Dol']);
+days.push(['Ral', 'Tir', 'Ort', 'Amn', 'Ral', 'Hel', 'Thul', 'Lem', 'Ith', 'Ort', 'Ith', 'Eth', 'Eld', 'Lum', 'Ral']);
+days.push(['Thul', 'Eld', 'Amn', 'Eth', 'Amn', 'Ral', 'Nef', 'Tal', 'Eld', 'Eth', 'Ko', 'Eld', 'Ith', 'Ral', 'Tal']);
+days.push(['Nef', 'Fal', 'Ort', 'Ral', 'Hel', 'Shael', 'Ort', 'Tal', 'Tal', 'Ort', 'Dol', 'Tir', 'Tal', 'Io', 'Eld']);
+days.push(['Thul', 'Hel', 'Ko', 'Tir', 'Eth', 'Tal', 'Ral', 'Shael', 'Ort', 'Dol', 'Ral', 'Eth', 'Sol', 'Ral', 'Amn']);
+days.push(['Dol', 'Ort', 'Ort', 'Tal', 'Ko', 'Um', 'Eth', 'Hel', 'Ort', 'El', 'Amn', 'Ral', 'Sol', 'Nef', 'Ith']);
+days.push(['Amn', 'Tal', 'Ort', 'Dol', 'Ith', 'Tal', 'Tal', 'Tal', 'Tal', 'Tir', 'Ith', 'Tal', 'Amn', 'Eth', 'Eth']);
+days.push(['Ist', 'Amn', 'Dol', 'Amn', 'Eld', 'Tir', 'Ral', 'Amn', 'Ort', 'Tal', 'Tal', 'Tir', 'Hel', 'Shael', 'Lem']);
+days.push(['Tal', 'Nef', 'Tir', 'Ort', 'Ith', 'Ko', 'Amn', 'Tir', 'Dol', 'Thul', 'Io', 'Sol', 'Eth', 'Tal', 'Eth']);
+days.push(['Ith', 'Tal', 'Thul', 'Ort', 'Ral', 'Ort', 'Nef', 'Dol', 'Amn', 'Ral', 'Tal', 'Nef', 'Ral', 'Ort', 'Eth']);
+days.push(['Sol', 'Nef', 'Ith', 'Ith', 'Tir', 'Ort', 'Thul', 'Tir', 'Thul', 'Mal', 'Ort', 'Ral', 'Thul', 'Tal', 'Eth']);
+days.push(['Tal', 'Thul', 'Amn', 'Lum', 'Shael', 'Ith', 'Ith', 'Tal', 'Amn', 'Dol', 'Amn', 'Amn', 'Ort', 'Amn', 'Eth']);
+days.push(['Dol', 'Tal', 'El', 'Ort', 'Ort', 'Tal', 'Shael', 'Tal', 'Ort', 'Tal', 'Dol', 'El', 'Ort', 'Amn', 'Amn']);
+days.push(['Tal', 'Amn', 'Ort', 'Tal', 'Ral', 'Ort', 'Ort', 'Ral', 'Ort', 'Eth', 'Eth', 'Amn', 'Sol', 'Amn', 'Tal']);
+days.push(['Amn', 'Sol', 'Eth', 'El', 'Tal', 'Ist', 'Io', 'Tal', 'Thul', 'Ral', 'El', 'Tal', 'Hel', 'Ral', 'Ort']);
+days.push(['Ith', 'Nef', 'Thul', 'Sol', 'Hel', 'Tal', 'Ort', 'Amn', 'Amn', 'Amn', 'Shael', 'Dol', 'Ral', 'Amn', 'Ort']);
+days.push(['Thul', 'Ort', 'Ort', 'Eth', 'Shael', 'Amn', 'Ort', 'Tir', 'Tal', 'Tal', 'Amn', 'Lum', 'Shael', 'El', 'Dol']);
+days.push(['Ort', 'Eth', 'Ral', 'Eth', 'Thul', 'Tal', 'Ort', 'Hel', 'Sol', 'Eth', 'Thul', 'Dol', 'Ith', 'Amn', 'Ral']);
+days.push(['El', 'Thul', 'Eth', 'Tir', 'Shael', 'Thul', 'Eth', 'Ith', 'Sol', 'Fal', 'Ral', 'Sol', 'Ral', 'Thul', 'Ral']);
+days.push(['Ort', 'Thul', 'Eth', 'Ort', 'El', 'Amn', 'Tir', 'Tal', 'Tal', 'Ral', 'El', 'Ral', 'Sol', 'Ith', 'Tal']);
+days.push(['Ort', 'Shael', 'Ral', 'Thul', 'Thul', 'Shael', 'Io', 'Tal', 'Sol', 'Hel', 'Hel', 'Thul', 'Ral', 'Lem', 'Mal']);
+days.push(['Sol', 'Pul', 'Tal', 'Eth', 'Thul', 'Thul', 'Lum', 'Tir', 'Lem', 'Io', 'Thul', 'Tal', 'Tir', 'Eth', 'Ral']);
+days.push(['Ort', 'Eth', 'Eth', 'Tal', 'Tal', 'Ort', 'Ort', 'Tir', 'Ort', 'Sol', 'El', 'Hel', 'Fal', 'Hel', 'Tal']);
+days.push(['Shael', 'Eth', 'Thul', 'Tal', 'Eld', 'Nef', 'Eth', 'Eth', 'Ral', 'Tir', 'Ort', 'Hel', 'Eth', 'Tal', 'Eth']);
+days.push(['Thul', 'Amn', 'El', 'Io', 'Amn', 'Eth', 'Ort', 'Shael', 'Tir', 'Amn', 'Tir', 'Lum', 'Ort', 'Ort', 'Ort']);
+days.push(['Ort', 'Thul', 'Ort', 'Thul', 'Thul', 'Eth', 'Ort', 'Ort', 'Tal', 'Amn', 'Io', 'Hel', 'Tir', 'Ort', 'Hel']);
+days.push(['Sol', 'Amn', 'Amn', 'Ith', 'Amn', 'Eth', 'Ral', 'Tir', 'Ko', 'Ort', 'Amn', 'Tal', 'Tal', 'Eth', 'Fal']);
+days.push(['Amn', 'Tal', 'Ral', 'Tal', 'Dol', 'Thul', 'Amn', 'Ort', 'El', 'Eth', 'Io', 'Sol', 'Tal', 'El', 'Shael']);
+days.push(['Thul', 'Ort', 'Eth', 'Shael', 'Ort', 'Ith', 'Ko', 'Eth', 'Eld', 'Shael', 'Shael', 'Ral', 'Sol', 'Tal', 'Ral']);
+days.push(['Ort', 'Shael', 'Nef', 'Ort', 'Tir', 'Ort', 'Thul', 'Ort', 'Tal', 'Shael', 'Amn', 'Ort', 'Dol', 'Shael', 'Ort']);
+days.push(['Tal', 'Shael', 'Ral', 'Shael', 'Thul', 'Tal', 'Eth', 'Tal', 'Mal', 'Eth', 'Amn', 'Shael', 'Ith', 'Amn', 'Eth']);
+days.push(['Thul', 'Ort', 'Tal', 'Tal', 'Dol', 'El', 'Ort', 'Lum', 'Tir', 'Lum', 'Tir', 'Tir', 'Tal', 'Ort', 'Thul']);
+days.push(['Nef', 'Ort', 'Tal', 'Eth', 'Eth', 'Fal', 'Sol', 'Ral', 'Fal', 'Eld', 'Ort', 'Sol', 'Ith', 'Shael', 'Tal']);
+days.push(['Amn', 'Dol', 'Ral', 'Sol', 'Ith', 'Nef', 'Hel', 'Ort', 'Eth', 'Ort', 'Thul', 'Amn', 'Eth', 'Tir', 'Tir']);
+days.push(['Ort', 'Ort', 'Ral', 'Eth', 'Ort', 'Sol', 'Tal', 'Amn', 'Dol', 'Sol', 'Ith', 'Tal', 'Ral', 'Amn', 'Eth']);
+days.push(['Nef', 'Tir', 'Amn', 'Shael', 'Eth', 'Thul', 'Ort', 'Ral', 'Ort', 'Dol', 'Tal', 'Thul', 'El', 'Amn', 'Shael']);
+days.push(['Nef', 'Tal', 'Ort', 'El', 'Eth', 'Tal', 'Tal', 'Tal', 'Ort', 'Tal', 'Tal', 'Tal', 'Sol', 'El', 'Dol']);
+days.push(['Eth', 'Ort', 'Amn', 'Ral', 'Tir', 'Thul', 'Ort', 'El', 'Eth', 'Eth', 'Lum', 'Ort', 'Pul', 'Lum', 'Sol']);
+days.push(['Ort', 'Ith', 'Shael', 'Ith', 'Ral', 'Tal', 'Tal', 'Ort', 'Eth', 'Amn', 'Amn', 'Amn', 'Tir', 'Ort', 'Thul']);
+days.push(['Ith', 'Eth', 'Ort', 'Thul', 'Ral', 'Dol', 'Ral', 'Nef', 'Shael', 'Io', 'Amn', 'Eth', 'Tal', 'Tal', 'Mal']);
+days.push(['Thul', 'Ko', 'Shael', 'Tal', 'Um', 'Amn', 'Tal', 'Shael', 'Tal', 'Thul', 'Ko', 'Amn', 'Eth', 'Hel', 'Tal']);
+days.push(['Shael', 'Tal', 'Tir', 'Thul', 'Sol', 'Thul', 'Tir', 'Eth', 'Shael', 'Thul', 'Ort', 'Ort', 'Tal', 'Ith', 'Dol']);
+days.push(['Lum', 'Sol', 'Io', 'Eth', 'Tir', 'Dol', 'Sol', 'Ith', 'Dol', 'Ort', 'Tal', 'Eth', 'Tir', 'Amn', 'Ort']);
+days.push(['Tal', 'Ort', 'Ral', 'Sol', 'Sol', 'Shael', 'Shael', 'Sol', 'Amn', 'Tal', 'Tal', 'Sol', 'Tir', 'Ral', 'Amn']);
+days.push(['Tal', 'Tal', 'Thul', 'Ort', 'Eld', 'Tal', 'Ral', 'Ith', 'Tal', 'Thul', 'Ral', 'El', 'Eth', 'Thul', 'Ith']);
+days.push(['Shael', 'Eth', 'Sol', 'Amn', 'Mal', 'Ith', 'Thul', 'Sol', 'Amn', 'Gul', 'Eth', 'Hel', 'Fal', 'Ort', 'Ral']);
+days.push(['Tal', 'Dol', 'Ral', 'Amn', 'Sol', 'Thul', 'Io', 'Nef', 'Amn', 'Eth', 'Eth', 'Tir', 'Ral', 'Tal', 'Shael']);
+days.push(['Ort', 'Tir', 'Ort', 'Tir', 'Hel', 'Amn', 'Thul', 'Shael', 'Ith', 'Ort']);
 
-
-var num = 10;
-var aaaa = shuffle(days.flat());
-let httt = '';
-for (let i = 0; i < aaaa.length; i++) {
-  if (i % num == 0) {
-    httt += `days.push([`;
-  }
-  httt += `'${aaaa[i]}'`;
-  if (i % num !== num - 1 && i != aaaa.length - 1) {
-    httt += `, `;
-  } else {
-    httt += `]);\n`;
-  }
-}
-console.log(httt);
+// var num = 15;
+// var aaaa = shuffle(days.flat());
+// days = [];
+// let httt = '';
+// let tmp = [];
+// for (let i = 0; i < aaaa.length; i++) {
+//   if (i % num == 0) {
+//     httt += `days.push([`;
+//     if (tmp.length > 0) {
+//      days.push(tmp);
+//     }
+//     tmp = [];
+//   }
+//   tmp.push(aaaa[i]);
+//   if (i == aaaa.length - 1) {
+//     days.push(tmp);
+//   }
+//   httt += `'${aaaa[i]}'`;
+//   if (i % num !== num - 1 && i != aaaa.length - 1) {
+//     httt += `, `;
+//   } else {
+//     httt += `]);\n`;
+//   }
+// }
+// console.log(httt);
