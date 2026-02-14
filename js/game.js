@@ -66,6 +66,7 @@ days.push(['Ort', 'Sol', 'Ral', 'Eth', 'Nef', 'Ith', 'Ort', 'Shael', 'Ko', 'Thul
 days.push(['El', 'Tal', 'Eld', 'El', 'Tal', 'Thul', 'Eth', 'Thul', 'Sol', 'Amn', 'Eld', 'Dol', 'Amn', 'Io', 'Ort']);
 days.push(['Sol', 'Tal', 'Hel', 'Ort', 'Tal', 'Tir', 'Amn', 'Amn', 'Amn', 'Ral', 'Shael', 'Thul', 'Ort', 'Ral', 'Thul']);
 days.push(['Thul', 'Amn', 'Eth', 'Sol', 'Tal', 'Amn', 'Ith', 'Amn', 'Amn', 'Ko', 'Um', 'Ort', 'Tal', 'Hel', 'Ort']);
+days.push(['Sol', 'Thul', 'Dol', 'Sol', 'Eth', 'Ort', 'Sol', 'Dol', 'Tal', 'Ko', 'Tal', 'Eth', 'Tal', 'Tir', 'Ko']);
 
 // var num = 15;
 // var aaaa = shuffle(days.flat());
