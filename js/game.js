@@ -87,6 +87,8 @@ days.push(['Tal', 'Tal', 'Tal', 'Tal', 'Eth', 'Eth', 'Eth', 'Ort', 'Ort', 'Amn',
 days.push(['Ort', 'Ort', 'Ort', 'Thul', 'Thul', 'Tal', 'Tal', 'Sol', 'Sol', 'Hel', 'Nef', 'Amn', 'Tir', 'Lum', 'El']);
 days.push(['Tal', 'Tal', 'Tal', 'Sol', 'Sol', 'Amn', 'Amn', 'Eth', 'Dol', 'Thul', 'Ral', 'Shael', 'Lum', 'Ith', 'Nef']);
 days.push(['Tal', 'Tal', 'Tal', 'Tal', 'Nef', 'Nef', 'Tir', 'Tir', 'Eth', 'Hel', 'Thul', 'Amn', 'Ral', 'Shael', 'Ort']);
+days.push(['Ort', 'Ort', 'Tal', 'Tal', 'Ral', 'Ral', 'Amn', 'Amn', 'Thul', 'Thul', 'Ko', 'Sol', 'Io', 'Dol', 'Nef']);
+days.push(['Amn', 'Amn', 'Amn', 'Thul', 'Thul', 'Thul', 'Eth', 'Eth', 'Shael', 'Shael', 'Tal', 'Ral', 'Sol', 'Ist', 'Io']);
 
 // var num = 15;
 // var aaaa = shuffle(days.flat());
