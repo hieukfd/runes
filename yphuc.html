@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Filter</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap');
+
+      body {
+        margin: 0;
+        padding: 40px;
+        background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+        font-family: 'Cinzel', serif;
+        color: #f0f0f0;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        color: #ffd700;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+      }
+
+      select {
+        margin: 0 auto 30px auto;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #444;
+        background: #222;
+        color: #fff;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      select:hover {
+        border-color: #ffd700;
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+      }
+
+      #items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      .item {
+        background: linear-gradient(145deg, #1c1c1c, #252525);
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #333;
+        transition: 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .item::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 60%);
+        transform: rotate(25deg);
+        pointer-events: none;
+      }
+
+      .item:hover {
+        transform: translateY(-6px) scale(1.03);
+        border-color: #ffd700;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      }
+
+      .item[data-tag='Storm'] {
+        border-left: 5px solid #4da6ff;
+      }
+
+      .item[data-tag='Viper'] {
+        border-left: 5px solid #4caf50;
+      }
+
+      .item[data-tag='Shadow'] {
+        border-left: 5px solid #9c27b0;
+      }
+
+      .item[data-tag='Pain'] {
+        border-left: 5px solid #e53935;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 20px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Filter Items By Tag</h2>
+
+    <select id="tagSelect">
+      <option value="All">All</option>
+    </select>
+
+    <select id="tagBase">
+      <option value="All">All</option>
+      <option value="Bar">Bar</option>
+      <option value="Bite">Bite</option>
+      <option value="Cleaver">Cleaver</option>
+      <option value="Cowl">Cowl</option>
+      <option value="Edge">Edge</option>
+      <option value="Falchion">Falchion</option>
+      <option value="Flange">Flange</option>
+      <option value="Hew">Hew</option>
+      <option value="Knell">Knell</option>
+      <option value="Gnarl">Gnarl</option>
+      <option value="Mask">Mask</option>
+      <option value="Nock">Nock</option>
+      <option value="Poleaxe">Poleaxe</option>
+      <option value="Rock">Rock</option>
+      <option value="Slayer">Slayer</option>
+      <option value="Song">Song</option>
+      <option value="Stake">Stake</option>
+      <option value="Stinger">Stinger</option>
+      <option value="Thirst">Thirst</option>
+    </select>
+
+    <div id="items"></div>
+    <script src="./js/yphuc.js"></script>
+
+    <script>
+      // ===== LẤY TAG =====
+      const getAllTagsWithCount = (arr) => {
+        return arr.reduce((acc, item) => {
+          const tag = item.split(' ')[0];
+          acc[tag] = (acc[tag] || 0) + 1;
+          return acc;
+        }, {});
+      };
+
+      // ===== RENDER TAG SELECT =====
+      const tagSelect = document.getElementById('tagSelect');
+      const tagBase = document.getElementById('tagBase');
+      const itemsContainer = document.getElementById('items');
+
+      let valuePrefix = 'All';
+      let valueBase = 'All';
+
+      const tagCounts = getAllTagsWithCount(arr);
+      Object.entries(tagCounts).forEach(([tag, count]) => {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = `${tag} (${count})`;
+        tagSelect.appendChild(option);
+      });
+
+      // ===== RENDER ITEMS =====
+      const renderItems = (items) => {
+        itemsContainer.innerHTML = '';
+        items.forEach((item) => {
+          const div = document.createElement('div');
+          div.className = 'item';
+
+          const tag = item.split(' ')[0];
+          div.setAttribute('data-tag', tag);
+
+          div.textContent = item;
+          itemsContainer.appendChild(div);
+        });
+      };
+
+      // ===== FILTER LOGIC =====
+      tagSelect.addEventListener('change', (e) => {
+        valuePrefix = e.target.value;
+        let filtered = arr;
+        if (valuePrefix !== 'All') {
+          filtered = filtered.filter((item) => item.startsWith(valuePrefix + ' '));
+        }
+        if (valueBase !== 'All') {
+          filtered = filtered.filter((item) => item.includes(valueBase));
+        }
+        renderItems(filtered);
+      });
+
+      tagBase.addEventListener('change', (e) => {
+        valueBase = e.target.value;
+        let filtered = arr;
+        if (valuePrefix !== 'All') {
+          filtered = filtered.filter((item) => item.startsWith(valuePrefix + ' '));
+        }
+        if (valueBase !== 'All') {
+          filtered = filtered.filter((item) => item.includes(valueBase));
+        }
+        renderItems(filtered);
+      });
+
+      // ===== INIT =====
+      renderItems(arr);
+    </script>
+  </body>
+</html>
