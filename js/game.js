@@ -105,6 +105,9 @@ days.push(['Tal', 'Tal', 'Tal', 'Nef', 'Nef', 'Io', 'Io', 'Eth', 'Eth', 'El', 'S
 days.push(['Amn', 'Amn', 'Amn', 'Amn', 'Ort', 'Ort', 'Tal', 'Tal', 'Thul', 'Thul', 'Eth', 'Tir', 'Io', 'Ith', 'Dol']);
 days.push(['Tal', 'Tal', 'Tal', 'Thul', 'Thul', 'Thul', 'Io', 'Dol', 'Sol', 'Lum', 'Mal', 'Ral', 'Eth', 'Ort', 'El']);
 days.push(['Ral', 'Ral', 'Ral', 'Ort', 'Ort', 'Io', 'Io', 'Lum', 'Nef', 'Lem', 'Shael', 'Amn', 'Eth', 'Vex', 'Sol']);
+days.push(['Thul', 'Thul', 'Thul', 'Tal', 'Tal', 'Dol', 'Dol', 'Sol', 'Sol', 'Fal', 'Shael', 'Ral', 'Eth', 'Amn', 'Nef']);
+days.push(['Ort', 'Ort', 'Ort', 'Ort', 'Shael', 'Shael', 'Shael', 'Eth', 'Eth', 'Amn', 'Amn', 'Ko', 'Sol', 'Um', 'Ith']);
+days.push(['Tal', 'Tal', 'Tal', 'Thul', 'Thul', 'Sol', 'Sol', 'Dol', 'Nef', 'Ral', 'Eth', 'Mal', 'Pul', 'Eld', 'Tir']);
 
 // var num = 15;
 // var aaaa = shuffle(days.flat());
