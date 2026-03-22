@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Item Analyzer Pro</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial;
+        background: #0f0f0f;
+        color: #eee;
+        display: flex;
+        height: 100vh;
+      }
+
+      /* LEFT: ITEM LIST */
+      #left {
+        width: 50%;
+        border-right: 1px solid #333;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #controls {
+        padding: 10px;
+        border-bottom: 1px solid #333;
+      }
+
+      select {
+        padding: 6px;
+        background: #222;
+        color: white;
+      }
+
+      #list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+      }
+
+      .item {
+        padding: 6px;
+        border-bottom: 1px solid #222;
+        cursor: pointer;
+      }
+
+      .item:hover {
+        background: #1f1f1f;
+      }
+
+      /* RIGHT: STATS */
+      #right {
+        width: 50%;
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+      }
+
+      .word {
+        width: 120px;
+      }
+
+      .bar {
+        height: 18px;
+        background: #4caf50;
+        margin-left: 10px;
+      }
+
+      .count {
+        margin-left: 10px;
+        color: #aaa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="left">
+      <div id="controls">
+        <select id="tagSelect">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div id="list"></div>
+    </div>
+
+    <div id="right">
+      <h3 id="total"></h3>
+      <div id="stats"></div>
+    </div>
+    <script src="./js/yphuc.js"></script>
+
+    <script>
+      // ===== GET TAG =====
+      const getTags = (arr) => {
+        return [...new Set(arr.map((i) => i.split(' ')[0]))];
+      };
+
+      // ===== ANALYZE =====
+      const analyzeTag = (arr, tag) => {
+        const wordCount = {};
+        const filtered = arr.filter((i) => (tag ? i.startsWith(tag + ' ') : true));
+
+        filtered.forEach((item) => {
+          item
+            .split(' ')
+            .slice(1)
+            .forEach((w) => {
+              wordCount[w] = (wordCount[w] || 0) + 1;
+            });
+        });
+
+        return {
+          total: filtered.length,
+          words: Object.entries(wordCount).sort((a, b) => b[1] - a[1]),
+        };
+      };
+
+      // ===== UI =====
+      const listDiv = document.getElementById('list');
+      const statsDiv = document.getElementById('stats');
+      const totalDiv = document.getElementById('total');
+      const select = document.getElementById('tagSelect');
+
+      // render tag
+      getTags(arr).forEach((tag) => {
+        const opt = document.createElement('option');
+        opt.value = tag;
+        opt.textContent = tag;
+        select.appendChild(opt);
+      });
+
+      // render list
+      const renderList = (items) => {
+        listDiv.innerHTML = '';
+        items.forEach((item) => {
+          const div = document.createElement('div');
+          div.className = 'item';
+          div.textContent = item;
+
+          div.onclick = () => {
+            div.style.background = '#333';
+          };
+
+          listDiv.appendChild(div);
+        });
+      };
+
+      // render stats
+      const renderStats = (tag) => {
+        const data = analyzeTag(arr, tag);
+
+        totalDiv.textContent = `Total: ${data.total}`;
+
+        statsDiv.innerHTML = '';
+        const max = data.words[0]?.[1] || 1;
+
+        data.words.forEach(([word, count]) => {
+          const row = document.createElement('div');
+          row.className = 'row';
+
+          const wordDiv = document.createElement('div');
+          wordDiv.className = 'word';
+          wordDiv.textContent = word;
+
+          const bar = document.createElement('div');
+          bar.className = 'bar';
+          bar.style.width = (count / max) * 300 + 'px';
+
+          const countDiv = document.createElement('div');
+          countDiv.className = 'count';
+          countDiv.textContent = count;
+
+          row.append(wordDiv, bar, countDiv);
+          statsDiv.appendChild(row);
+        });
+      };
+
+      // event
+      select.addEventListener('change', (e) => {
+        const tag = e.target.value;
+        const filtered = arr.filter((i) => i.startsWith(tag + ' '));
+        renderList(filtered);
+        renderStats(tag);
+      });
+
+      // init
+      const firstTag = '';
+      console.log(firstTag);
+      select.value = '';
+      renderList(arr.filter((i) => (firstTag ? i.startsWith(firstTag + ' ') : true)));
+      renderStats(firstTag);
+    </script>
+  </body>
+</html>
